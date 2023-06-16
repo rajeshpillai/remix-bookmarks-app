@@ -103,7 +103,7 @@ export default function BookMarksById() {
         </button>
       </Form>
 
-      {bookmarks?.map((bookmark: BookMark) => (
+      {bookmarks?.map((bookmark) => (
         <div
           style={{ border: "1px solid grey", padding: 6, margin: 8 }}
           key={bookmark.id}

@@ -66,7 +66,7 @@ export default function Index() {
         </button>
       </Form>
 
-      {users.map((user: User) => (
+      {users.map((user) => (
         <div key={user.id} style={{ border: "1px solid grey", padding: 6, margin: 8 }}>
           <div>{user.username}</div>
           <div>{user.email}</div>

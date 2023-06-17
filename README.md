@@ -14,6 +14,8 @@ npm install
 Add the DATABASE_URL in the .env file (for eg)
 DATABASE_URL=file:./bookmarks-dev.db
 
+By default this app uses sqlite (You can change the configuration to use any supported RDBMS)
+
 Run the migration
 ```sh
 npx prisma migrate dev

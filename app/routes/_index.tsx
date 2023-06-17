@@ -1,5 +1,5 @@
 import type { V2_MetaFunction } from "@remix-run/node";
-import { Form, Link, useLoaderData, useTransition } from "@remix-run/react";
+import { Form, Link, useLoaderData, useNavigation } from "@remix-run/react";
 // import { PrismaClient, User } from "@prisma/client";
 import { db } from "~/utils/db.server";
 
@@ -40,8 +40,8 @@ export async function action({ request }) {
 
 export default function Index() {
   const users = useLoaderData();
-  const { state } = useTransition();
-  const busy = state === "submitting";
+  const navigation = useNavigation();
+  const busy = navigation.state === "submitting";
 
   return (
     <div

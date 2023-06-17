@@ -1,4 +1,4 @@
-import { Form, Link, useParams, useLoaderData, useTransition } from "@remix-run/react";
+import { Form, Link, useParams, useLoaderData, useNavigation } from "@remix-run/react";
 import { db } from "~/utils/db.server";
 
 /**
@@ -72,8 +72,8 @@ export async function action({ request }) {
  */
 export default function BookMarksById() {
   const { bookmarks, user } = useLoaderData();
-  const { state } = useTransition();
-  const busy = state === "submitting";
+  const navigation = useNavigation();
+  const busy = navigation.state === "submitting";
 
   const { id } = useParams();
 

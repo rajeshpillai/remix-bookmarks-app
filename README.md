@@ -5,6 +5,25 @@ The remix template with fastify, patch-package and pm2.
 
 ## Development
 
+Install dependencies
+
+```sh
+npm install
+```
+
+Add the DATABASE_URL in the .env file (for eg)
+DATABASE_URL=file:./bookmarks-dev.db
+
+Run the migration
+```sh
+npx prisma migrate dev
+```
+
+Open up Prisma Studio to view the data
+```sh
+npx prisma studio
+```
+
 Start the Remix development asset server and the Express server by running:
 
 ```sh

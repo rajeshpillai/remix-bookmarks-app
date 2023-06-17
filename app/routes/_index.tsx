@@ -52,7 +52,7 @@ export default function Index() {
         margin: "auto",
       }}
     >
-      <h2>Users and Bookmarks: Sample App Tutorial 2</h2>
+      <h2>Users and Bookmarks: Sample App</h2>
       <h4>Remix with Prisma and SQLite</h4>
       <Form method="post">
         <div>
